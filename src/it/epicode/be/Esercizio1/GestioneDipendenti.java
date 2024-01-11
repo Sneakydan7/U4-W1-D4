@@ -19,8 +19,9 @@ public class GestioneDipendenti {
 
     static void sommaStipendi(Dipendente[] dipendenti) {
         double somma = 0;
+        int oreStraordinario = 5;
         for (Dipendente dipendente : dipendenti) {
-            somma += dipendente.getStipendio();
+            somma += dipendente.getStipendio() + (dipendente.getImportoOraStraordinario() * 5);
         }
         System.out.println("la somma degli stipendi è" + somma);
     }
